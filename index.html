@@ -31,7 +31,7 @@
 
     <!-- Thêm thẻ <audio> để phát nhạc nền cướp biển -->
     <audio id="pirate-music" autoplay loop>
-        <source src="./Pirates of the Caribbean Theme - Fingerstyle Guitar Cover - Eddie van der Meer.mp3" type="audio/mp3">
+        <source src="Pirates of the Caribbean Theme - Fingerstyle Guitar Cover - Eddie van der Meer.mp3" type="audio/mp3">
         Trình duyệt của bạn không hỗ trợ thẻ audio.
     </audio>
 
@@ -40,7 +40,7 @@
     window.onload = function() {
         document.getElementById('pirate-music').play();
     };
-    document.getElementById("pirate-music").volume = 0.05; // Điều chỉnh âm lượng (0 đến 1)
+    document.getElementById("pirate-music").volume = 0.009; // Điều chỉnh âm lượng (0 đến 1)
     document.getElementById("submitBtn").addEventListener("click", handleSubmit);
     document.getElementById("code").addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
