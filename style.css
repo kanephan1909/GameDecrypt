@@ -6,58 +6,87 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7fc;
+    background-color: #2a2a2a;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Pirate_ship_at_sea.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
 }
 
 .container {
-    text-align: center;
-    background-color: #fff;
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
     width: 350px;
 }
 
-.title {
-    font-size: 30px;
-    font-weight: bold;
-    color: #333;
+.header {
+    margin-bottom: 30px;
+}
+
+.pirate-flag {
+    width: 100px;
     margin-bottom: 20px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 2px 2px 5px #000;
 }
 
 .subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 20px;
+    color: #FFA500;
+    text-shadow: 1px 1px 3px #000;
 }
 
-input {
-    padding: 12px;
-    font-size: 16px;
+.map-wrapper {
+    margin-bottom: 30px;
+}
+
+.treasure-map {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.input-section {
+    margin-top: 20px;
+}
+
+.pirate-input {
+    padding: 10px;
     width: 80%;
+    font-size: 18px;
+    border: 2px solid #FFD700;
     border-radius: 8px;
-    border: 2px solid #ccc;
+    background-color: transparent;
+    color: white;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-button {
-    padding: 12px 30px;
+.pirate-button {
+    padding: 12px 25px;
     font-size: 18px;
-    background-color: #28a745;
-    color: white;
+    background-color: #FF4500;
     border: none;
     border-radius: 8px;
+    color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #218838;
+.pirate-button:hover {
+    background-color: #D43600;
 }
 
 #message {
@@ -70,6 +99,6 @@ button:hover {
 }
 
 #waitMessage {
-    font-size: 14px;
-    color: #888;
+    font-size: 18px;
+    color: #FFD700;
 }
