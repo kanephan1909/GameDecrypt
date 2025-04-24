@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Ngày Giải Phóng Miền Nam</title>
+    <link rel="stylesheet" href="success-style.css">
+</head>
+<body>
+    <div class="success-container">
+        <div class="header">
+            <h1 class="title">Ngày Giải Phóng Miền Nam</h1>
+            <p class="subtitle">Chúc mừng bạn đã mở cổng thành công!</p>
+        </div>
+        <div class="image-wrapper">
+            <img src="img/14-17437582882318.jpg.crdownload" alt="Ngày Giải Phóng Miền Nam" class="main-image">
+        </div>
+        <div class="confetti-wrapper">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+        </div>
+        <p class="success-message">Mừng Ngày 30/4 - Giải Phóng Miền Nam</p>
+        <div class="footer">
+            <button onclick="window.location.href='index.html'">Quay lại trang chủ</button>
+        </div>
+    </div>
+    <!-- Thêm thẻ <audio> để phát nhạc nền -->
+        <audio id="background-music" autoplay loop>
+            <source src="./Như Có Bác Trong Ngày Đại Thắng (Thu thanh 14h 30_04_1975)  Hà Nội Vi Vu - Hà Nội Vi Vu.mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ thẻ audio.
+        </audio>
+    
+        <script>
+            // Tự động phát nhạc khi trang được tải
+            window.onload = function() {
+                document.getElementById('background-music').play();
+            };
+        </script>
+</body>
+</html>
