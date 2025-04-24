@@ -15,7 +15,7 @@
         </div>
         
         <div class="map-wrapper">
-            <img src="./img/bandokhobau-removebg-preview.png" alt="Bản Đồ Kho Báu" class="treasure-map">
+            <img src="./img/cheat.png" alt="Bản Đồ Kho Báu" class="treasure-map">
         </div>
 
         <div class="input-section">
@@ -29,9 +29,17 @@
         </div>
     </div>
 
+    <!-- Thêm thẻ <audio> để phát nhạc nền cướp biển -->
+    <audio id="pirate-music" autoplay loop>
+        <source src="./Pirates of the Caribbean Theme - Fingerstyle Guitar Cover - Eddie van der Meer.mp3" type="audio/mp3">
+        Trình duyệt của bạn không hỗ trợ thẻ audio.
+    </audio>
+
+
     <script src="pirate-script.js"></script>
 </body>
 <script>
+    document.getElementById("pirate-music").volume = 0.009; // Điều chỉnh âm lượng (0 đến 1)
     document.getElementById("submitBtn").addEventListener("click", handleSubmit);
     document.getElementById("code").addEventListener("keypress", function(event) {
         if (event.key === "Enter") {

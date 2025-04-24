@@ -12,18 +12,21 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Pirate_ship_at_sea.jpg');
+    background-image: url('./img/29Z_2105.w026.n002.416B.p1.416.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    width: 350px;
+    width: 400px;
+    z-index: 1;
+    animation: shipSway 8s ease-in-out infinite; /* Tăng thời gian để hiệu ứng nhẹ nhàng hơn */
+    transform-origin: center center; /* Đảm bảo chuyển động không bị lệch */
 }
 
 .header {
@@ -50,6 +53,10 @@ body {
 
 .map-wrapper {
     margin-bottom: 30px;
+    display: flex;          /* Bật flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;     /* Căn giữa theo chiều dọc */
+    position: relative;      /* Đảm bảo .pirate-input được căn giữa trong .map-wrapper */
 }
 
 .treasure-map {
@@ -64,14 +71,14 @@ body {
 
 .pirate-input {
     padding: 10px;
-    width: 80%;
-    font-size: 18px;
+    width: 60%;
+    font-size: 16px;
     border: 2px solid #FFD700;
     border-radius: 8px;
     background-color: transparent;
     color: white;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .pirate-button {
@@ -101,4 +108,24 @@ body {
 #waitMessage {
     font-size: 18px;
     color: #FFD700;
+}
+
+
+/* Thêm hiệu ứng con tàu lênh đênh (lắc lư) */
+@keyframes shipSway {
+    0% {
+        transform: rotate(1deg); /* Nhẹ nhàng hơn khi bắt đầu */
+    }
+    25% {
+        transform: rotate(-3deg); /* Lắc sang trái mạnh hơn */
+    }
+    50% {
+        transform: rotate(1deg); /* Quay lại vị trí gần ban đầu */
+    }
+    75% {
+        transform: rotate(-2deg); /* Lắc nhẹ về phía trái */
+    }
+    100% {
+        transform: rotate(0deg); /* Quay về vị trí ban đầu */
+    }
 }
