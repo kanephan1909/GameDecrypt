@@ -1,3 +1,4 @@
+/* Thiết lập chung cho trang */
 * {
     margin: 0;
     padding: 0;
@@ -6,45 +7,51 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #006f2d;
+    background-color: #f0f8ff; /* Màu nền sáng và dịu */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: white;
-    margin: 0;
-    overflow: hidden;
+    text-align: center;
+    background-image: url('./img/3-17437662630855.jpg.crdownload'); /* Hình nền nền đẹp */
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
+/* Container chính */
 .success-container {
-    text-align: center;
-    background-color: #ffcc00;
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trong suốt cho container */
     padding: 50px;
-    border-radius: 15px;
-    width: 450px;
+    border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    animation: successAnimation 1s ease-in-out;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
 .header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .title {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: bold;
-    color: #ff4500;
-    margin-bottom: 10px;
+    color: #FF6347; /* Màu đỏ cam cho tiêu đề */
+    text-shadow: 2px 2px 5px #000;
 }
 
 .subtitle {
-    font-size: 18px;
-    color: #ff6600;
+    font-size: 20px;
+    color: #ffa500; /* Màu vàng cho phụ đề */
+    font-weight: 500;
 }
 
+/* Hình ảnh */
 .image-wrapper {
-    margin: 20px auto;
-    width: 80%;
+    margin: 20px 0;
 }
 
 .main-image {
@@ -53,60 +60,74 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.success-message {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-button {
-    padding: 12px 30px;
-    font-size: 18px;
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #e63e00;
-}
-
+/* Hiệu ứng confetti */
 .confetti-wrapper {
     position: relative;
-    margin: 20px auto;
-    height: 100px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
 }
 
 .confetti {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #e63e00;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #ff1493; /* Màu confetti */
     border-radius: 50%;
-    animation: confettiEffect 3s ease-in-out infinite;
+    animation: confettiFall 3s infinite;
 }
 
 .confetti:nth-child(1) {
-    animation-delay: 0.5s;
-    left: 25%;
+    animation-delay: 0s;
 }
 
 .confetti:nth-child(2) {
-    animation-delay: 1s;
-    left: 50%;
+    animation-delay: 0.5s;
 }
 
 .confetti:nth-child(3) {
-    animation-delay: 1.5s;
-    left: 75%;
+    animation-delay: 1s;
 }
 
-@keyframes successAnimation {
+/* Hiệu ứng rơi confetti */
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(300px);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+.success-message {
+    font-size: 24px;
+    color: #32cd32; /* Màu xanh lá cây tươi sáng */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Nút quay lại */
+.footer button {
+    padding: 12px 30px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.footer button:hover {
+    background-color: #ff4500; /* Đổi màu khi hover */
+    transform: scale(1.1); /* Phóng to nút khi hover */
+}
+
+/* Thêm hiệu ứng fade-in */
+@keyframes fadeIn {
     0% {
         opacity: 0;
         transform: translateY(50px);
@@ -114,17 +135,5 @@ button:hover {
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes confettiEffect {
-    0% {
-        transform: translateY(-50px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(50px) rotate(180deg);
-    }
-    100% {
-        transform: translateY(-50px) rotate(360deg);
     }
 }
